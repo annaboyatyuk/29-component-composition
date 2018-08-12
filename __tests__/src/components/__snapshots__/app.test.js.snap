@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App/> (Snapshot Test renders 1`] = `
+Array [
+  <nav>
+    <ul>
+      <li>
+        <a
+          aria-current="page"
+          className="active"
+          href="/"
+          onClick={[Function]}
+          style={Object {}}
+        >
+          HOME
+        </a>
+      </li>
+      <li>
+        <a
+          aria-current={null}
+          href="/dashboard"
+          onClick={[Function]}
+        >
+          DASHBOARD
+        </a>
+      </li>
+    </ul>
+  </nav>,
+  <main>
+    <h2>
+      Welcome to the Notes
+    </h2>
+    <p>
+      Add notes to this app! delete them if you get sick of them! its fun!
+    </p>
+    <p>
+      click the dashboard to get startedddd
+    </p>
+  </main>,
+]
+`;
