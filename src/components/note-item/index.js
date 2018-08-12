@@ -16,17 +16,18 @@ export default class noteItem extends React.Component {
 
   handleDouble = (e) => {
     e.preventDefault();
-    console.log('XXXXXXX', this.state);
     this.setState({editing: true})
-    console.log('AAAAAAAa', this.props.note)
+  }
+
+  onCancel = (e) => {
+    e.preventDefault();
+    this.setState({editing: false})
   }
 
 
   render() {
 
-    
     if(this.state.editing) {
-      console.log('OOOOOOOOOOOOOO', this.state);
       return (
         <React.Fragment>
         <p>
@@ -35,12 +36,10 @@ export default class noteItem extends React.Component {
 
         <button onClick={this.removeOne} >X</button>
 
-        <UpdateForm  note={this.props.note} handleSubmit={this.props.handleSubmit} updateNote={this.props.updateNote} editState={this.state.editing}/>
+        <UpdateForm  note={this.props.note} handleSubmit={this.props.handleSubmit} updateNote={this.props.updateNote} onCancel={this.onCancel}/>
       </React.Fragment>
       );
     }
-
-
 
     return (
       <React.Fragment>

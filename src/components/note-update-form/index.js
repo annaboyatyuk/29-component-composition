@@ -14,7 +14,7 @@ export default class UpdateForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.onCancel = this.onCancel.bind(this);
+    // this.onCancel = this.onCancel.bind(this);
 
   }
 
@@ -28,20 +28,12 @@ export default class UpdateForm extends React.Component {
     this.props.updateNote(this.state);
   }
 
-  onCancel(e) {
-    e.preventDefault();
-    // this.setState({editing: false});
-    this.props.updateNote({});
-  }
-
-
   render() {
     console.log(this.props.note);
     
     return (
       <React.Fragment>
 
-      
         <form onSubmit={this.handleSubmit}>
         
           <label>Edit Title</label>
@@ -52,8 +44,8 @@ export default class UpdateForm extends React.Component {
 
           <input type="text" name='content' onChange={this.handleChange} placeholder={this.props.note.content}/>
 
-          <button onClick={this.onCancel}>Cancel</button>
-          <button>Submit</button>
+          <button onClick={this.props.onCancel}>Cancel</button>
+          <button >Submit</button>
         
         </form>
       

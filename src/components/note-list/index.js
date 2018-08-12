@@ -13,9 +13,7 @@ export default class NoteList extends React.Component {
           {this.props.notes.map(item => (
             <li id={item.id} key={item.id}>
               <h2>{item.title}</h2>
-              {/* <p onDoubleClick={this.props.handleDouble} >
-                {item.content}
-              </p> */}
+              
               <Item remove={this.props.remove} note={item} updateNote={this.props.updateNote}/>
             </li>
           ))}
