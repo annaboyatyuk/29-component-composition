@@ -30,8 +30,8 @@ export default class UpdateForm extends React.Component {
 
   onCancel(e) {
     e.preventDefault();
+    // this.setState({editing: false});
     this.props.updateNote({});
-    this.setState({editing: false});
   }
 
 

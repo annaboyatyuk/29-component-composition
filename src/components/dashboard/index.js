@@ -85,7 +85,7 @@ export default class Notes extends React.Component {
         arr[i] = note;
       }
     }
-    this.setState({notes: arr});
+    this.setState({notes: arr, editing: false});
   }
 
   // showForm() {
