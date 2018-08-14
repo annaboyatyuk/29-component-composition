@@ -14,8 +14,6 @@ export default class UpdateForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    // this.onCancel = this.onCancel.bind(this);
-
   }
 
   handleChange(e) {
