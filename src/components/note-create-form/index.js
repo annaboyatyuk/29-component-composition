@@ -13,7 +13,7 @@ export default class Form extends React.Component {
           <input type="text" id='title' value={this.props.title} onChange={this.props.handleChange}/>
 
           <label>NOTE</label>
-          <input type="text" id='content' value={this.props.content}onChange={this.props.handleChange}/>
+          <input type="text" id='content' value={this.props.content} onChange={this.props.handleChange}/>
 
           <input type='submit'/>
 
@@ -22,7 +22,5 @@ export default class Form extends React.Component {
       </React.Fragment>
     );
   }
-
-
 
 }

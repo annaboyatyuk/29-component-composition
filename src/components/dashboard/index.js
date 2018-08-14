@@ -63,21 +63,6 @@ export default class Notes extends React.Component {
   }
 
   updateNote(note) {
-  //   if(note === {}) {
-  //     this.setState({
-  //       editing : false,
-  //     });
-  //   } else {
-  //     let arr = [...this.state.notes];
-
-  //     for(let i = 0; i < arr.length; i++) {
-  //       if(arr[i].id === note.id) {
-  //         arr[i] = note;
-  //       }
-  //     }
-  //     this.setState({notes: arr});
-  //   }
-  // }
     let arr = [...this.state.notes];
 
     for(let i = 0; i < arr.length; i++) {
@@ -85,12 +70,8 @@ export default class Notes extends React.Component {
         arr[i] = note;
       }
     }
-    this.setState({notes: arr});
+    this.setState({notes: arr, editing: false});
   }
-
-  // showForm() {
-  //   this.setState({editing: true});
-  // }
 
   render() {
     return (
