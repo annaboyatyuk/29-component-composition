@@ -2,8 +2,8 @@
 ===
 
 ## Links
-* PR - 
-* Travis - 
+* PR - https://github.com/annaboyatyuk/29-component-composition/pull/1
+
 
 
 ## Configuration
