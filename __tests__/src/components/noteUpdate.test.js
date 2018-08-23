@@ -1,10 +1,7 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import {shallow} from 'enzyme';
 
 import Dashboard from '../../../src/components/dashboard/index';
-import NoteItem from '../../../src/components/note-item/index';
-import NoteCreateForm from '../../../src/components/note-create-form';
 import NoteUpdateForm from '../../../src/components/note-update-form/index';
 
 describe('Note create form', () => {
@@ -18,29 +15,26 @@ describe('Note create form', () => {
     expect(wrapper.find('form').exists()).toBeTruthy();
   });
 
-  xit('should update a note', () => {
+  it('should update a note', () => {
     let wrapper = shallow(<Dashboard/>);
+    let instance = wrapper.instance();
 
     const note = {
       id: 222,
       title: 'title',
       content: 'content',
     };
-    wrapper.instance().state.notes = [note];
+    instance.state.notes = [note];
     expect(wrapper.state('notes')[0].title).toBe('title');
 
-    const event = {
-      preventDefault: () => {},
+    const note2 = {
+      id: 222,
+      title: 'sfljlksdjf',
     };
 
-    let noteWrapper = shallow(<NoteUpdateForm note={note} updateNote={wrapper.instance().updateNote}/>);
+    instance.updateNote(note2);
 
-    wrapper.instance().state.title = 'new one';
-    wrapper.instance().updateNote(event);
-
-    expect(wrapper.state('notes')[0].title).toBe('');
-
+    expect(wrapper.state('notes')[0].title).toBe('sfljlksdjf');
   });
-
 
 });
